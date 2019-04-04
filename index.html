@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- <a-entity
+                id="myRobot"
+                position="0 0 0"
+                rotation="0 0 0"
+                animation="property:  rotation;  to:  0 0 0;  dur:  10000;  startEvents:  ;  pauseEvents:  ;  resumeEvents:  ;  loop:  true"
+                --
+            >
+                >
+                <a-entity id="hipBone" position="0 .75 0">
+                    <a-box
+                        id="torso"
+                        position="0 0.35 0"
+                        scale="0.6 0.7 0.3"
+                        color="#56677E"
+                    ></a-box>
+                </a-entity>
+                <a-entity id="leftLegBone" position="0.15 0.75">
+                    <a-box
+                        id="leftThigh"
+                        position="0 -0.25"
+                        scale="0.1 0.3 0.3"
+                        material=""
+                        geometry=""
+                    ></a-box>
+                    <a-sphere id="leftKnee"></a-sphere>
+                    <a-box id="leftShin"></a-box>
+                    <a-sphere id="leftAnkle"></a-sphere>
+                    <a-box id="leftFoot"></a-box>
+                </a-entity>
+            </a-entity> -->
+
+            <a-entity
+                id="myRobot"
+                position=""
+                rotation=""
+                animation="property: rotation; to: 0 0 0; dur: 10000; loop: NaN"
+                --=""
+            >
+                &gt;
+                <a-entity id="hipBone" position="0 0.75">
+                    <a-box
+                        id="torso"
+                        position="0 0.35"
+                        scale="0.6 0.7 0.3"
+                        color="#56677E"
+                        material=""
+                        geometry=""
+                    ></a-box>
+                </a-entity>
+                <a-entity id="leftLegBone" position="0.15 0.75">
+                    <a-box
+                        id="leftThigh"
+                        position="0 -0.18"
+                        scale="0.18 0.36 0.14"
+                        material="color: #56677E"
+                        geometry=""
+                    ></a-box>
+                    <a-sphere
+                        id="leftKnee"
+                        material="color: #56677E"
+                        geometry=""
+                        visible=""
+                        position="0 -.35 0"
+                        scale="0.1 0.1 0.1"
+                    ></a-sphere>
+                    <a-box
+                        id="leftShin"
+                        material="color: #56677E"
+                        geometry=""
+                        visible=""
+                        position="0 -.5 0"
+                        scale="0.1 0.23539 0.11654"
+                    ></a-box>
+                    <a-sphere
+                        id="leftAnkle"
+                        material="color: #56677E"
+                        geometry=""
+                        visible=""
+                        scale="0.075 0.075 0.075"
+                        position="0 -0.64"
+                    ></a-sphere>
+                    <a-box
+                        id="leftFoot"
+                        material="color: #56677E"
+                        geometry=""
+                        visible=""
+                        position="0 -0.7 0.07272"
+                        scale="0.16078 0.1 0.33205"
+                    ></a-box>
+                </a-entity>
+
+                <a-entity id="rightLegBone" position="-0.15 0.75">
+                        <a-box
+                            id="rightThigh"
+                            position="0 -0.18"
+                            scale="0.18 0.36 0.14"
+                            material="color: #56677E"
+                            geometry=""
+                        ></a-box>
+                        <a-sphere
+                            id="rightKnee"
+                            material="color: #56677E"
+                            geometry=""
+                            visible=""
+                            position="0 -.35 0"
+                            scale="0.1 0.1 0.1"
+                        ></a-sphere>
+                        <a-box
+                            id="rightShin"
+                            material="color: #56677E"
+                            geometry=""
+                            visible=""
+                            position="0 -.5 0"
+                            scale="0.1 0.23539 0.11654"
+                        ></a-box>
+                        <a-sphere
+                            id="rightAnkle"
+                            material="color: #56677E"
+                            geometry=""
+                            visible=""
+                            scale="0.075 0.075 0.075"
+                            position="0 -0.64"
+                        ></a-sphere>
+                        <a-box
+                            id="rightFoot"
+                            material="color: #56677E"
+                            geometry=""
+                            visible=""
+                            position="0 -0.7 0.07272"
+                            scale="0.16078 0.1 0.33205"
+                        ></a-box>
+                    </a-entity>
+            </a-entity>
+            <a-plane
+                position=""
+                rotation="-90 0"
+                width="5"
+                height="5"
+                color="#5a5a5a"
+                shadow=""
+                material=""
+                geometry=""
+            ></a-plane>
+
+            <a-box
+                id="boundingBox"
+                scale="1 2 1"
+                position="0 1 0"
+                rotation="0 0 0"
+                transparent="true"
+                opacity="0.5"
+                color="#dcf0ef"
+            ></a-box>
+            <a-sky color="#ECECEC"></a-sky>
+            <a-entity
+                id="camera"
+                camera=""
+                look-controls=""
+                wasd-controls=""
+                position="0 1.55 2.25"
+                rotation=""
+                data-aframe-inspector-original-camera=""
+            ></a-entity>
+        </a-scene>
+    </body>
+</html>
