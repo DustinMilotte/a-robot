@@ -25,7 +25,95 @@
                         geometry=""
                     >
                     </a-box>
-                    
+                    <!-- Neck -->
+                    <a-entity id="neckBone" position="0 0.7">
+                        <a-cylinder
+                            id="neckLower"
+                            material="color: #56677E"
+                            geometry=""
+                            scale="0.1 0.05 0.1"
+                            position="0 0.025"
+                        ></a-cylinder>
+                        <a-cylinder
+                            id="neckUpper"
+                            material="color: #56677E"
+                            geometry=""
+                            scale="0.075 0.025 0.075"
+                            position="0 0.06275"
+                        ></a-cylinder>
+                        <!-- Head -->
+                        <a-entity id="headBone" position="0 0.075">
+                            <a-box
+                                id="head"
+                                material="color: #56677E"
+                                geometry=""
+                                scale="0.325 0.35 0.35"
+                                position="0 0.175"
+                            ></a-box>
+                            <!-- Eyes -->
+                            <a-cylinder
+                                id="rightEye"
+                                material=""
+                                geometry=""
+                                visible=""
+                                position="-.07 .216 .175"
+                                scale="0.04 0.04 0.04"
+                                rotation="90 0"
+                            ></a-cylinder>
+                            <a-box
+                                id="rightEyeBrow"
+                                material=""
+                                geometry=""
+                                position="-.07 .28 .18"
+                                scale="0.08 0.01 0.01"
+                            ></a-box>
+                            <a-cylinder
+                                id="leftEye"
+                                material=""
+                                geometry=""
+                                visible=""
+                                position=".07 .216 .175"
+                                scale="0.04 0.04 0.04"
+                                rotation="90 0"
+                            ></a-cylinder>
+                            <a-box
+                                id="leftEyeBrow"
+                                material=""
+                                geometry=""
+                                position=".07 .28 .18"
+                                scale="0.08 0.01 0.01"
+                            ></a-box>
+                            <!-- Nose -->
+                            <a-cylinder
+                                id="nose"
+                                scale="0.04 0.04 0.04"
+                                material=""
+                                position="0 .16 .17"
+                                geometry="segmentsRadial: 3"
+                                rotation="-90 0"
+                            ></a-cylinder>
+                            <!-- Mouth -->
+                            <a-box
+                                id="mouthMiddle"
+                                scale="0.15 0.02 0.02"
+                                material=""
+                                geometry=""
+                                position="0 .08 .18"
+                                visible="true"
+                            ></a-box>
+                           
+                            <a-torus
+                                id="mouthTorus"
+                                material=""
+                                geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
+                                position="0 .09 .18"
+                                scale="0.06 0.03 0.03"
+                                rotation="0 0 180"
+                                visible="false"
+                            ></a-torus>
+                        </a-entity>
+                    </a-entity>
+
                     <!-- Left Arm -->
                     <a-entity id="leftArmBone" position=".36 .58">
                         <a-sphere
