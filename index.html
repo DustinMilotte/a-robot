@@ -4,7 +4,7 @@
     </head>
     <body>
         <a-scene>
-            <!-- Robot -->
+            <!-- BEGIN ROBOT -->
             <a-entity
                 id="myRobot"
                 position=""
@@ -17,14 +17,80 @@
                 <a-entity id="hipBone" position="0 0.75">
                     <!-- Torso -->
                     <a-box
-                        id="torso"
+                        id="torsoOuter"
                         position="0 0.35"
-                        scale="0.6 0.7 0.3"
+                        scale="0.6 0.7 0.25"
                         color="#56677E"
                         material=""
                         geometry=""
                     >
                     </a-box>
+                    <a-box
+                        id="torsoInner"
+                        position="0 0.35 .04"
+                        scale="0.50 0.6 0.2"
+                        color="#444"
+                        material=""
+                        geometry=""
+                    >
+                    </a-box>
+                    <!--  Chest Screen -->
+                    <a-box
+                        id="chestScreen"
+                        scale="0.44 0.33 0.17"
+                        material=""
+                        geometry=""
+                        position="0 0.45 0.06"
+                        color="#000"
+                    ></a-box>
+                    <a-cylinder
+                        id="chestScreenKnob1"
+                        material=""
+                        color="#aaa"
+                        geometry=""
+                        scale="0.04 0.04 0.04"
+                        rotation="90 0"
+                        position="-.16 .18 .14"
+                    ></a-cylinder>
+                    <a-cylinder
+                        id="chestScreenKnob2"
+                        material=""
+                        geometry=""
+                        color="#aaa"
+                        scale="0.04 0.04 0.04"
+                        rotation="90 0"
+                        position=".16 .18 .14"
+                    ></a-cylinder>
+                    <a-box
+                        id="chestScreenPort1"
+                        color="#000"
+                        geometry=""
+                        scale="0.17 0.01 0.1"
+                        position="0 .21 .095"
+                    ></a-box>
+                    <a-box
+                        id="chestScreenPort2"
+                        color="#000"
+                        geometry=""
+                        scale="0.17 0.01 0.1"
+                        position="0 .16 .095"
+                    ></a-box>
+                    <a-entity
+                        id="screenText"
+                        text="value:$ ./hello.c; color: #00ff00; align: center; letterSpacing: 5;"
+                        scale="1.4 1.4 1.4"
+                        position="-.02 .52 .15"
+                    >
+                        <!-- <a-box
+                            id="screenLine1"
+                            material=""
+                            geometry=""
+                            scale="0.1 0.01 0.03"
+                            position="-.13 .42 .135"
+                            color="#0f0"
+                        ></a-box> -->
+                    </a-entity>
+
                     <!-- Neck -->
                     <a-entity id="neckBone" position="0 0.7">
                         <a-cylinder
@@ -101,7 +167,7 @@
                                 position="0 .08 .18"
                                 visible="true"
                             ></a-box>
-                           
+
                             <a-torus
                                 id="mouthTorus"
                                 material=""
@@ -765,6 +831,8 @@
                     </a-entity>
                 </a-entity>
             </a-entity>
+            <!-- END ROBOT -->
+
             <a-plane
                 position=""
                 rotation="-90 0"
