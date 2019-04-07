@@ -9,8 +9,8 @@
                 id="myRobot"
                 position=""
                 rotation=""
-                animation="property: rotation; to: 0 0 0; dur: 10000; loop: NaN"
-                --=""
+                animation="property: rotation; to: 0 0 0; dur: 10000; loop: true"
+                
             >
                 &gt;
                 <!-- Hip Bone -->
@@ -46,7 +46,7 @@
                     <a-cylinder
                         id="chestScreenKnob1"
                         material=""
-                        color="#aaa"
+                        color="#777"
                         geometry=""
                         scale="0.04 0.04 0.04"
                         rotation="90 0"
@@ -56,7 +56,7 @@
                         id="chestScreenKnob2"
                         material=""
                         geometry=""
-                        color="#aaa"
+                        color="#777"
                         scale="0.04 0.04 0.04"
                         rotation="90 0"
                         position=".16 .18 .14"
@@ -95,7 +95,7 @@
                     <a-entity id="neckBone" position="0 0.7">
                         <a-cylinder
                             id="neckLower"
-                            material="color: #56677E"
+                            material="color: #424e57"
                             geometry=""
                             scale="0.1 0.05 0.1"
                             position="0 0.025"
@@ -122,13 +122,14 @@
                                 material=""
                                 geometry=""
                                 visible=""
-                                position="-.07 .216 .175"
+                                position="-.07 .216 .165"
                                 scale="0.04 0.04 0.04"
                                 rotation="90 0"
                             ></a-cylinder>
+                            <a-sphere id="rightEyePupil" scale=".01 .01 .01" material="color: #0000ff" position="-.07 .215 .184"></a-sphere>
                             <a-box
                                 id="rightEyeBrow"
-                                material=""
+                                material="color:#21272c;"
                                 geometry=""
                                 position="-.07 .28 .18"
                                 scale="0.08 0.01 0.01"
@@ -138,13 +139,14 @@
                                 material=""
                                 geometry=""
                                 visible=""
-                                position=".07 .216 .175"
+                                position=".07 .216 .165"
                                 scale="0.04 0.04 0.04"
                                 rotation="90 0"
                             ></a-cylinder>
+                            <a-sphere id="rightEyePupil" scale=".01 .01 .01" material="color: #0000ff" position=".07 .215 .184"></a-sphere>
                             <a-box
                                 id="leftEyeBrow"
-                                material=""
+                                material="color:#21272c;"
                                 geometry=""
                                 position=".07 .28 .18"
                                 scale="0.08 0.01 0.01"
@@ -153,8 +155,8 @@
                             <a-cylinder
                                 id="nose"
                                 scale="0.04 0.04 0.04"
-                                material=""
-                                position="0 .16 .17"
+                                material="color: #424e57"
+                                position="0 .16 .176"
                                 geometry="segmentsRadial: 3"
                                 rotation="-90 0"
                             ></a-cylinder>
@@ -162,14 +164,14 @@
                             <a-box
                                 id="mouthMiddle"
                                 scale="0.15 0.02 0.02"
-                                material=""
+                                material="color:#c5cdd3"
                                 geometry=""
                                 position="0 .08 .18"
                                 visible="true"
                             ></a-box>
 
                             <a-torus
-                                id="mouthTorus"
+                                id="mouthSmile"
                                 material=""
                                 geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
                                 position="0 .09 .18"
@@ -177,6 +179,81 @@
                                 rotation="0 0 180"
                                 visible="false"
                             ></a-torus>
+
+                            <a-torus
+                            id="mouthFrown"
+                            material=""
+                            geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
+                            position="0 .067 .18"
+                            scale="0.06 0.03 0.03"
+                            rotation="0 0 0"
+                            visible="false"
+                        ></a-torus>
+
+                            <!-- Ears -->
+                            <a-entity id="leftEar" position="0.166 0.188">
+                                <a-cylinder
+                                    id="leftEarBase"
+                                    material="color: #424e57"
+                                    geometry=""
+                                    visible=""
+                                    scale="0.06 0.04 0.04"
+                                    rotation="0 0 -90"
+                                ></a-cylinder>
+                                <a-entity
+                                    id="leftEarAntennaeBone"
+                                    position=".008 0 0"
+                                >
+                                    <a-cone
+                                        id="leftEarCone"
+                                        position=".039 0 0"
+                                        material="color:#c5cdd3"
+                                        geometry="radiusBottom: 0.1"
+                                        scale="0.1 0.07 0.1"
+                                        rotation="0 0 -90"
+                                    ></a-cone>
+                                    <a-sphere
+                                        id="leftEarTip"
+                                        position=".071"
+                                        material="color:#f00;"
+                                        geometry=""
+                                        visible=""
+                                        scale="0.01 0.01 0.01"
+                                    ></a-sphere>
+                                </a-entity>
+                            </a-entity>
+
+                            <a-entity id="rightEar" position="-0.166 0.188">
+                                <a-cylinder
+                                    id="rightEarBase"
+                                    material="color: #424e57"
+                                    geometry=""
+                                    visible=""
+                                    scale="0.06 0.04 0.04"
+                                    rotation="0 0 -90"
+                                ></a-cylinder>
+                                <a-entity
+                                    id="rightEarAntennaeBone"
+                                    position="-.008 0 0"
+                                >
+                                    <a-cone
+                                        id="rightEarCone"
+                                        position="-.039 0 0"
+                                        material="color:#c5cdd3"
+                                        geometry="radiusBottom: 0.1"
+                                        scale="0.1 0.07 0.1"
+                                        rotation="0 0 90"
+                                    ></a-cone>
+                                    <a-sphere
+                                        id="rightEarTip"
+                                        position="-.071"
+                                        material="color:#f00;"
+                                        geometry=""
+                                        visible=""
+                                        scale="0.01 0.01 0.01"
+                                    ></a-sphere>
+                                </a-entity>
+                            </a-entity>
                         </a-entity>
                     </a-entity>
 
@@ -187,7 +264,7 @@
                             geometry=""
                             scale="0.12 0.12 0.12"
                             position="0.0 0"
-                            material="color: #56677E"
+                            material="color: #424e57"
                         ></a-sphere>
                         <a-box
                             id="leftUpperArm"
@@ -205,7 +282,7 @@
                                 scale="0.07 0.07 0.07"
                                 visible=""
                                 rotation=""
-                                material="color: #56677E"
+                                material="color: #424e57"
                             ></a-sphere>
                             <a-box
                                 id="leftLowerArm"
@@ -216,11 +293,11 @@
                                 material="color: #56677E"
                             ></a-box>
                             <!-- Left Hand -->
-                            <a-entity id="leftWristBone" position="0 -.27">
+                            <a-entity id="leftWristBone" position="0 -.27" scale="1.2 1.2 1.2">
                                 <a-sphere
                                     id="leftWrist"
                                     scale=".045 .045 .045"
-                                    material="color: #56677E"
+                                    material="color: #424e57"
                                 ></a-sphere>
                                 <a-box
                                     id="leftHand"
@@ -238,7 +315,7 @@
                                     <a-sphere
                                         id="leftThumbJoint1"
                                         scale=".015 .015 .015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                     ></a-sphere>
                                     <a-box
                                         id="leftThumbPart1"
@@ -255,7 +332,7 @@
                                         <a-sphere
                                             id="leftThumbJoint2"
                                             scale=".012 .012 .012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                         ></a-sphere>
                                         <a-box
                                             id="leftThumbPart2"
@@ -270,7 +347,7 @@
                                             <a-sphere
                                                 id="leftThumbJoint3"
                                                 scale=".01 .01 .01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                             ></a-sphere>
                                             <a-box
                                                 id="leftThumbPart3"
@@ -291,7 +368,7 @@
                                     <a-sphere
                                         id="leftIndexFingerJoint1"
                                         scale="0.015 0.015 0.015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                         geometry=""
                                     ></a-sphere>
                                     <a-box
@@ -309,7 +386,7 @@
                                         <a-sphere
                                             id="leftIndexFingerJoint2"
                                             scale="0.012 0.012 0.012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                             geometry=""
                                         ></a-sphere>
                                         <a-box
@@ -326,7 +403,7 @@
                                             <a-sphere
                                                 id="leftIndexFingerJoint3"
                                                 scale="0.01 0.01 0.01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                                 geometry=""
                                             ></a-sphere>
                                             <a-box
@@ -349,7 +426,7 @@
                                     <a-sphere
                                         id="leftMiddleFingerJoint1"
                                         scale="0.015 0.015 0.015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                         geometry=""
                                     ></a-sphere>
                                     <a-box
@@ -367,7 +444,7 @@
                                         <a-sphere
                                             id="leftMiddleFingerJoint2"
                                             scale="0.012 0.012 0.012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                             geometry=""
                                         ></a-sphere>
                                         <a-box
@@ -384,7 +461,7 @@
                                             <a-sphere
                                                 id="leftMiddleFingerJoint3"
                                                 scale="0.01 0.01 0.01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                                 geometry=""
                                             ></a-sphere>
                                             <a-box
@@ -407,7 +484,7 @@
                                     <a-sphere
                                         id="leftOuterFingerJoint1"
                                         scale="0.015 0.015 0.015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                         geometry=""
                                     ></a-sphere>
                                     <a-box
@@ -425,7 +502,7 @@
                                         <a-sphere
                                             id="leftOuterFingerJoint2"
                                             scale="0.012 0.012 0.012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                             geometry=""
                                         ></a-sphere>
                                         <a-box
@@ -442,7 +519,7 @@
                                             <a-sphere
                                                 id="leftOuterFingerJoint3"
                                                 scale="0.01 0.01 0.01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                                 geometry=""
                                             ></a-sphere>
                                             <a-box
@@ -466,7 +543,7 @@
                             geometry=""
                             scale="0.12 0.12 0.12"
                             position="0.0 0"
-                            material="color: #56677E"
+                            material="color: #424e57"
                         ></a-sphere>
                         <a-box
                             id="rightUpperArm"
@@ -484,7 +561,7 @@
                                 scale="0.07 0.07 0.07"
                                 visible=""
                                 rotation=""
-                                material="color: #56677E"
+                                material="color: #424e57"
                             ></a-sphere>
                             <a-box
                                 id="rightLowerArm"
@@ -495,11 +572,11 @@
                                 material="color: #56677E"
                             ></a-box>
                             <!-- Right Hand -->
-                            <a-entity id="rightWristBone" position="0 -.27">
+                            <a-entity id="rightWristBone" position="0 -.27" scale="1.2 1.2 1.2">
                                 <a-sphere
                                     id="rightWrist"
                                     scale=".045 .045 .045"
-                                    material="color: #56677E"
+                                    material="color: #424e57"
                                 ></a-sphere>
                                 <a-box
                                     id="rightHand"
@@ -517,7 +594,7 @@
                                     <a-sphere
                                         id="rightThumbJoint1"
                                         scale=".015 .015 .015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                     ></a-sphere>
                                     <a-box
                                         id="rightThumbPart1"
@@ -534,7 +611,7 @@
                                         <a-sphere
                                             id="rightThumbJoint2"
                                             scale=".012 .012 .012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                         ></a-sphere>
                                         <a-box
                                             id="rightThumbPart2"
@@ -549,7 +626,7 @@
                                             <a-sphere
                                                 id="rightThumbJoint3"
                                                 scale=".01 .01 .01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                             ></a-sphere>
                                             <a-box
                                                 id="rightThumbPart3"
@@ -570,7 +647,7 @@
                                     <a-sphere
                                         id="rightIndexFingerJoint1"
                                         scale="0.015 0.015 0.015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                         geometry=""
                                     ></a-sphere>
                                     <a-box
@@ -588,7 +665,7 @@
                                         <a-sphere
                                             id="rightIndexFingerJoint2"
                                             scale="0.012 0.012 0.012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                             geometry=""
                                         ></a-sphere>
                                         <a-box
@@ -605,7 +682,7 @@
                                             <a-sphere
                                                 id="rightIndexFingerJoint3"
                                                 scale="0.01 0.01 0.01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                                 geometry=""
                                             ></a-sphere>
                                             <a-box
@@ -628,7 +705,7 @@
                                     <a-sphere
                                         id="rightMiddleFingerJoint1"
                                         scale="0.015 0.015 0.015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                         geometry=""
                                     ></a-sphere>
                                     <a-box
@@ -646,7 +723,7 @@
                                         <a-sphere
                                             id="rightMiddleFingerJoint2"
                                             scale="0.012 0.012 0.012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                             geometry=""
                                         ></a-sphere>
                                         <a-box
@@ -663,7 +740,7 @@
                                             <a-sphere
                                                 id="rightMiddleFingerJoint3"
                                                 scale="0.01 0.01 0.01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                                 geometry=""
                                             ></a-sphere>
                                             <a-box
@@ -686,7 +763,7 @@
                                     <a-sphere
                                         id="rightOuterFingerJoint1"
                                         scale="0.015 0.015 0.015"
-                                        material="color: #56677E"
+                                        material="color: #424e57"
                                         geometry=""
                                     ></a-sphere>
                                     <a-box
@@ -704,7 +781,7 @@
                                         <a-sphere
                                             id="rightOuterFingerJoint2"
                                             scale="0.012 0.012 0.012"
-                                            material="color: #56677E"
+                                            material="color: #424e57"
                                             geometry=""
                                         ></a-sphere>
                                         <a-box
@@ -721,7 +798,7 @@
                                             <a-sphere
                                                 id="rightOuterFingerJoint3"
                                                 scale="0.01 0.01 0.01"
-                                                material="color: #56677E"
+                                                material="color: #424e57"
                                                 geometry=""
                                             ></a-sphere>
                                             <a-box
@@ -750,7 +827,7 @@
                     <a-entity id="leftKneeBone" position="0 -.35 0">
                         <a-sphere
                             id="leftKnee"
-                            material="color: #56677E"
+                            material="color: #424e57"
                             geometry=""
                             visible=""
                             position=""
@@ -767,7 +844,7 @@
                         <a-entity id="leftAnkleBone" position="0 -.28">
                             <a-sphere
                                 id="leftAnkle"
-                                material="color: #56677E"
+                                material="color: #424e57"
                                 geometry=""
                                 visible=""
                                 scale="0.075 0.075 0.075"
@@ -796,7 +873,7 @@
                     <a-entity id="rightKneeBone" position="0 -.35 0">
                         <a-sphere
                             id="rightKnee"
-                            material="color: #56677E"
+                            material="color: #424e57"
                             geometry=""
                             visible=""
                             position=""
@@ -813,7 +890,7 @@
                         <a-entity id="rightAnkleBone" position="0 -.28">
                             <a-sphere
                                 id="rightAnkle"
-                                material="color: #56677E"
+                                material="color: #424e57"
                                 geometry=""
                                 visible=""
                                 scale="0.075 0.075 0.075"
@@ -838,7 +915,7 @@
                 rotation="-90 0"
                 width="5"
                 height="5"
-                color="#5a5a5a"
+                color="#333"
                 shadow=""
                 material=""
                 geometry=""
