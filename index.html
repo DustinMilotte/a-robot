@@ -9,8 +9,7 @@
                 id="myRobot"
                 position=""
                 rotation=""
-                animation="property: rotation; to: 0 0 0; dur: 10000; loop: true"
-                
+                animation="property: rotation; to: 0 0 0; dur: 8000; loop: true; easing:;"
             >
                 &gt;
                 <!-- Hip Bone -->
@@ -77,18 +76,10 @@
                     ></a-box>
                     <a-entity
                         id="screenText"
-                        text="value:$ ./hello.c; color: #00ff00; align: center; letterSpacing: 5;"
+                        text="value: $ ./hello; color: #00ff00; align: center; font: sourcecodepro"
                         scale="1.4 1.4 1.4"
-                        position="-.02 .52 .15"
+                        position="-0.03473 0.56141 0.15"
                     >
-                        <!-- <a-box
-                            id="screenLine1"
-                            material=""
-                            geometry=""
-                            scale="0.1 0.01 0.03"
-                            position="-.13 .42 .135"
-                            color="#0f0"
-                        ></a-box> -->
                     </a-entity>
 
                     <!-- Neck -->
@@ -126,7 +117,12 @@
                                 scale="0.04 0.04 0.04"
                                 rotation="90 0"
                             ></a-cylinder>
-                            <a-sphere id="rightEyePupil" scale=".01 .01 .01" material="color: #0000ff" position="-.07 .215 .184"></a-sphere>
+                            <a-sphere
+                                id="rightEyePupil"
+                                scale=".01 .01 .01"
+                                material="color: #0000ff"
+                                position="-.07 .215 .184"
+                            ></a-sphere>
                             <a-box
                                 id="rightEyeBrow"
                                 material="color:#21272c;"
@@ -143,7 +139,12 @@
                                 scale="0.04 0.04 0.04"
                                 rotation="90 0"
                             ></a-cylinder>
-                            <a-sphere id="rightEyePupil" scale=".01 .01 .01" material="color: #0000ff" position=".07 .215 .184"></a-sphere>
+                            <a-sphere
+                                id="rightEyePupil"
+                                scale=".01 .01 .01"
+                                material="color: #0000ff"
+                                position=".07 .215 .184"
+                            ></a-sphere>
                             <a-box
                                 id="leftEyeBrow"
                                 material="color:#21272c;"
@@ -181,14 +182,14 @@
                             ></a-torus>
 
                             <a-torus
-                            id="mouthFrown"
-                            material=""
-                            geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
-                            position="0 .067 .18"
-                            scale="0.06 0.03 0.03"
-                            rotation="0 0 0"
-                            visible="false"
-                        ></a-torus>
+                                id="mouthFrown"
+                                material=""
+                                geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
+                                position="0 .067 .18"
+                                scale="0.06 0.03 0.03"
+                                rotation="0 0 0"
+                                visible="false"
+                            ></a-torus>
 
                             <!-- Ears -->
                             <a-entity id="leftEar" position="0.166 0.188">
@@ -293,7 +294,11 @@
                                 material="color: #56677E"
                             ></a-box>
                             <!-- Left Hand -->
-                            <a-entity id="leftWristBone" position="0 -.27" scale="1.2 1.2 1.2">
+                            <a-entity
+                                id="leftWristBone"
+                                position="0 -.27"
+                                scale="1.2 1.2 1.2"
+                            >
                                 <a-sphere
                                     id="leftWrist"
                                     scale=".045 .045 .045"
@@ -572,7 +577,11 @@
                                 material="color: #56677E"
                             ></a-box>
                             <!-- Right Hand -->
-                            <a-entity id="rightWristBone" position="0 -.27" scale="1.2 1.2 1.2">
+                            <a-entity
+                                id="rightWristBone"
+                                position="0 -.27"
+                                scale="1.2 1.2 1.2"
+                            >
                                 <a-sphere
                                     id="rightWrist"
                                     scale=".045 .045 .045"
@@ -909,7 +918,7 @@
                 </a-entity>
             </a-entity>
             <!-- END ROBOT -->
-
+            <!-- Floor -->
             <a-plane
                 position=""
                 rotation="-90 0"
@@ -920,7 +929,7 @@
                 material=""
                 geometry=""
             ></a-plane>
-
+            <!-- Reference Box -->
             <a-box
                 id="boundingBox"
                 visible="false"
@@ -931,14 +940,15 @@
                 opacity="0.5"
                 color="#dcf0ef"
             ></a-box>
+            <!-- Sky -->
             <a-sky color="#ECECEC"></a-sky>
+            <!-- Camera -->
             <a-entity
                 id="camera"
                 camera=""
                 look-controls=""
                 wasd-controls=""
-                position="0 1.55 2.25"
-                rotation=""
+                position="0 1.35 1.95"
                 data-aframe-inspector-original-camera=""
             ></a-entity>
         </a-scene>
