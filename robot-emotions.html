@@ -2861,8 +2861,968 @@
                 visible="false"
             ></a-box>
 
+            <!-- Begin Surprised Robot -->
+            <a-entity
+                id="myRobot"
+                position=".75 0 -4"
+                rotation=""
+                animation="property: rotation; to: 0 0 0; dur: 8000; loop: true; easing:;"
+            >
+                &gt;
+                <!-- Hip Bone -->
+                <a-entity
+                    id="hipBone"
+                    rotation="-7.062850740577658 0 0"
+                    position="0 0.75"
+                >
+                    <!-- Torso -->
+                    <a-box
+                        id="torsoOuter"
+                        position="0 0.35"
+                        scale="0.6 0.7 0.25"
+                        color="#56677E"
+                        material=""
+                        geometry=""
+                    >
+                    </a-box>
+                    <a-box
+                        id="torsoInner"
+                        position="0 0.35 .04"
+                        scale="0.50 0.6 0.2"
+                        color="#444"
+                        material=""
+                        geometry=""
+                    >
+                    </a-box>
+                    <!--  Chest Screen -->
+                    <a-box
+                        id="chestScreen"
+                        scale="0.44 0.33 0.17"
+                        material=""
+                        geometry=""
+                        position="0 0.45 0.06"
+                        color="#000"
+                    ></a-box>
+                    <a-cylinder
+                        id="chestScreenKnob1"
+                        material=""
+                        color="#777"
+                        geometry=""
+                        scale="0.04 0.04 0.04"
+                        rotation="90 0"
+                        position="-.16 .18 .14"
+                    ></a-cylinder>
+                    <a-cylinder
+                        id="chestScreenKnob2"
+                        material=""
+                        geometry=""
+                        color="#777"
+                        scale="0.04 0.04 0.04"
+                        rotation="90 0"
+                        position=".16 .18 .14"
+                    ></a-cylinder>
+                    <a-box
+                        id="chestScreenPort1"
+                        color="#000"
+                        geometry=""
+                        scale="0.17 0.01 0.1"
+                        position="0 .21 .095"
+                    ></a-box>
+                    <a-box
+                        id="chestScreenPort2"
+                        color="#000"
+                        geometry=""
+                        scale="0.17 0.01 0.1"
+                        position="0 .16 .095"
+                    ></a-box>
+                    <a-entity
+                        id="screenText"
+                        text="value: !!!; color: #00ff00; align: center; font: sourcecodepro; wrapCount: 12"
+                        scale="1.4 1.4 1.4"
+                        position="-0.00379 0.49884 0.15"
+                    >
+                    </a-entity>
 
+                    <!-- Neck -->
+                    <a-entity
+                        id="neckBone"
+                        rotation="3.558640865557543 0 0"
+                        position="0 0.7"
+                    >
+                        <a-cylinder
+                            id="neckLower"
+                            material="color: #424e57"
+                            geometry=""
+                            scale="0.1 0.05 0.1"
+                            position="0 0.025"
+                        ></a-cylinder>
+                        <a-cylinder
+                            id="neckUpper"
+                            material="color: #56677E"
+                            geometry=""
+                            scale="0.075 0.025 0.075"
+                            position="0 0.06275"
+                        ></a-cylinder>
+                        <!-- Head -->
+                        <a-entity id="headBone" position="0 0.075">
+                            <a-box
+                                id="head"
+                                material="color: #56677E"
+                                geometry=""
+                                scale="0.325 0.35 0.35"
+                                position="0 0.175"
+                            ></a-box>
+                            <!-- Eyes -->
+                            <a-cylinder
+                                id="rightEye"
+                                material=""
+                                geometry=""
+                                visible=""
+                                position="-.07 .216 .165"
+                                scale="0.04 0.04 0.04"
+                                rotation="90 0"
+                            ></a-cylinder>
+                            <a-sphere
+                                id="rightEyePupil"
+                                scale=".01 .01 .01"
+                                material="color: #0000ff"
+                                position="-.07 .215 .184"
+                            ></a-sphere>
+                            <a-box
+                                id="rightEyeBrow"
+                                material="color:#21272c;"
+                                geometry=""
+                                position="-0.07 0.31644 0.18"
+                                scale="0.08 0.01 0.01"
+                            ></a-box>
+                            <a-cylinder
+                                id="leftEye"
+                                material=""
+                                geometry=""
+                                visible=""
+                                position=".07 .216 .165"
+                                scale="0.04 0.04 0.04"
+                                rotation="90 0"
+                            ></a-cylinder>
+                            <a-sphere
+                                id="rightEyePupil"
+                                scale=".01 .01 .01"
+                                material="color: #0000ff"
+                                position=".07 .215 .184"
+                            ></a-sphere>
+                            <a-box
+                                id="leftEyeBrow"
+                                material="color:#21272c;"
+                                geometry=""
+                                position="0.07 0.316 0.18"
+                                scale="0.08 0.01 0.01"
+                            ></a-box>
+                            <!-- Nose -->
+                            <a-cylinder
+                                id="nose"
+                                scale="0.04 0.04 0.04"
+                                material="color: #424e57"
+                                position="0 .16 .176"
+                                geometry="segmentsRadial: 3"
+                                rotation="-90 0"
+                            ></a-cylinder>
+                            <!-- Mouth -->
+                            <a-box
+                                id="mouthMiddle"
+                                scale="0.15 0.02 0.02"
+                                material="color:#c5cdd3"
+                                geometry=""
+                                position="0 .08 .18"
+                                visible="false"
+                            ></a-box>
 
+                            <a-torus
+                                id="mouthSmile"
+                                material=""
+                                geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
+                                position="0 .09 .18"
+                                scale="0.06 0.03 0.03"
+                                rotation="0 0 180"
+                                visible="false"
+                            ></a-torus>
+
+                            <a-torus
+                                id="mouthFrown"
+                                material=""
+                                geometry="arc: 180; radiusTubular: 0.15; segmentsRadial: 6; segmentsTubular: 6"
+                                position="0 .067 .18"
+                                scale="0.06 0.03 0.03"
+                                rotation="0 0 0"
+                                visible="false"
+                            ></a-torus>
+
+                            <a-torus
+                                id="mouthOpen"
+                                material=""
+                                geometry="arc: 360; radiusTubular: 0.15; segmentsRadial: 16; segmentsTubular: 16"
+                                position="0 .067 .18"
+                                scale="0.035 0.04 0.03"
+                                rotation="0 0 0"
+                                visible="true"
+                            ></a-torus>
+                            <a-sphere
+                                id="mouthOpenSphere"
+                                scale="0.03 0.03 0.005"
+                                position="0.00029 0.06722 0.18152"
+                                material="color: #000"
+                            ></a-sphere>
+
+                            <!-- Ears -->
+                            <a-entity id="leftEar" position="0.166 0.188">
+                                <a-cylinder
+                                    id="leftEarBase"
+                                    material="color: #424e57"
+                                    geometry=""
+                                    visible=""
+                                    scale="0.06 0.04 0.04"
+                                    rotation="0 0 -90"
+                                ></a-cylinder>
+                                <a-entity
+                                    id="leftEarAntennaeBone"
+                                    rotation="0 0 25"
+                                    position=".008 0 0"
+                                >
+                                    <a-cone
+                                        id="leftEarCone"
+                                        position=".039 0 0"
+                                        material="color:#c5cdd3"
+                                        geometry="radiusBottom: 0.1"
+                                        scale="0.1 0.07 0.1"
+                                        rotation="0 0 -90"
+                                    ></a-cone>
+                                    <a-sphere
+                                        id="leftEarTip"
+                                        position=".071"
+                                        material="color:#f00;"
+                                        geometry=""
+                                        visible=""
+                                        scale="0.01 0.01 0.01"
+                                    ></a-sphere>
+                                </a-entity>
+                            </a-entity>
+
+                            <a-entity id="rightEar" position="-0.166 0.188">
+                                <a-cylinder
+                                    id="rightEarBase"
+                                    material="color: #424e57"
+                                    geometry=""
+                                    visible=""
+                                    scale="0.06 0.04 0.04"
+                                    rotation="0 0 -90"
+                                ></a-cylinder>
+                                <a-entity
+                                    id="rightEarAntennaeBone"
+                                    rotation="0 0 -25"
+                                    position="-.008 0 0"
+                                >
+                                    <a-cone
+                                        id="rightEarCone"
+                                        position="-.039 0 0"
+                                        material="color:#c5cdd3"
+                                        geometry="radiusBottom: 0.1"
+                                        scale="0.1 0.07 0.1"
+                                        rotation="0 0 90"
+                                    ></a-cone>
+                                    <a-sphere
+                                        id="rightEarTip"
+                                        position="-.071"
+                                        material="color:#f00;"
+                                        geometry=""
+                                        visible=""
+                                        scale="0.01 0.01 0.01"
+                                    ></a-sphere>
+                                </a-entity>
+                            </a-entity>
+                        </a-entity>
+                    </a-entity>
+
+                    <!-- Left Arm -->
+                    <a-entity
+                        id="leftArmBone"
+                        rotation="-80.58995163192107 -14.98341930046616 9.240090362074787"
+                        position=".36 .58"
+                    >
+                        <a-sphere
+                            id="leftShoulder"
+                            geometry=""
+                            scale="0.12 0.12 0.12"
+                            position="0.0 0"
+                            material="color: #424e57"
+                        ></a-sphere>
+                        <a-box
+                            id="leftUpperArm"
+                            geometry=""
+                            visible=""
+                            scale="0.1 0.3 0.16"
+                            position="0.02 -0.14"
+                            material="color: #56677E"
+                        ></a-box>
+                        <a-entity
+                            id="leftElbowBone"
+                            rotation="-19.644430963855406 51.72949453338638 -110.50808882026728"
+                            position=".02 -.3"
+                        >
+                            <a-sphere
+                                id="leftElbow"
+                                geometry=""
+                                position=""
+                                scale="0.07 0.07 0.07"
+                                visible=""
+                                rotation=""
+                                material="color: #424e57"
+                            ></a-sphere>
+                            <a-box
+                                id="leftLowerArm"
+                                geometry=""
+                                visible=""
+                                scale="0.1 0.25 0.1"
+                                position="0 -.14"
+                                material="color: #56677E"
+                            ></a-box>
+                            <!-- Left Hand -->
+                            <a-entity
+                                id="leftWristBone"
+                                rotation="-25.086957059803098 -10.575654982524735 20.379535815008254"
+                                position="0 -.27"
+                                scale="1.2 1.2 1.2"
+                            >
+                                <a-sphere
+                                    id="leftWrist"
+                                    scale=".045 .045 .045"
+                                    material="color: #424e57"
+                                ></a-sphere>
+                                <a-box
+                                    id="leftHand"
+                                    material="color: #56677E"
+                                    geometry=""
+                                    scale="0.03 0.1 0.09"
+                                    position="0 -.06"
+                                ></a-box>
+                                <!-- Left Thumb -->
+                                <a-entity
+                                    id="leftThumbBone1"
+                                    rotation="57.30895754237033 0 0"
+                                    position=".002 -.07 .046"
+                                    scale=".8 .8 .8"
+                                >
+                                    <a-sphere
+                                        id="leftThumbJoint1"
+                                        scale=".015 .015 .015"
+                                        material="color: #424e57"
+                                    ></a-sphere>
+                                    <a-box
+                                        id="leftThumbPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="leftThumbBone2"
+                                        rotation="18.62513904631767 0 0"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="leftThumbJoint2"
+                                            scale=".012 .012 .012"
+                                            material="color: #424e57"
+                                        ></a-sphere>
+                                        <a-box
+                                            id="leftThumbPart2"
+                                            scale=".015 .015 .025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                        ></a-box>
+                                        <a-entity
+                                            id="leftThumbBone3"
+                                            position="0 0 .032"
+                                        >
+                                            <a-sphere
+                                                id="leftThumbJoint3"
+                                                scale=".01 .01 .01"
+                                                material="color: #424e57"
+                                            ></a-sphere>
+                                            <a-box
+                                                id="leftThumbPart3"
+                                                scale=".01 .01 .015"
+                                                material="color: #56677E"
+                                                position="0 0 .012"
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                                <!-- Left Index Finger -->
+                                <a-entity
+                                    id="leftIndexFingerBone1"
+                                    position="0.002 -0.0973 0.035"
+                                    scale="1.2 1.2 1.2"
+                                    rotation="90 0"
+                                >
+                                    <a-sphere
+                                        id="leftIndexFingerJoint1"
+                                        scale="0.015 0.015 0.015"
+                                        material="color: #424e57"
+                                        geometry=""
+                                    ></a-sphere>
+                                    <a-box
+                                        id="leftIndexFingerPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="leftIndexFingerBone2"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="leftIndexFingerJoint2"
+                                            scale="0.012 0.012 0.012"
+                                            material="color: #424e57"
+                                            geometry=""
+                                        ></a-sphere>
+                                        <a-box
+                                            id="leftIndexFingerPart2"
+                                            scale="0.015 0.015 0.025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                            geometry=""
+                                        ></a-box>
+                                        <a-entity
+                                            id="leftIndexFingerBone3"
+                                            position="0 0 0.032"
+                                        >
+                                            <a-sphere
+                                                id="leftIndexFingerJoint3"
+                                                scale="0.01 0.01 0.01"
+                                                material="color: #424e57"
+                                                geometry=""
+                                            ></a-sphere>
+                                            <a-box
+                                                id="leftIndexFingerPart3"
+                                                scale="0.01 0.01 0.015"
+                                                material="color: #56677E"
+                                                position="0 0 0.012"
+                                                geometry=""
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                                <!-- Left Middle Finger -->
+                                <a-entity
+                                    id="leftMiddleFingerBone1"
+                                    position="0.002 -0.0973 -.005"
+                                    scale="1.2 1.2 1.2"
+                                    rotation="90 0"
+                                >
+                                    <a-sphere
+                                        id="leftMiddleFingerJoint1"
+                                        scale="0.015 0.015 0.015"
+                                        material="color: #424e57"
+                                        geometry=""
+                                    ></a-sphere>
+                                    <a-box
+                                        id="leftMiddleFingerPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="leftMiddleFingerBone2"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="leftMiddleFingerJoint2"
+                                            scale="0.012 0.012 0.012"
+                                            material="color: #424e57"
+                                            geometry=""
+                                        ></a-sphere>
+                                        <a-box
+                                            id="leftMiddleFingerPart2"
+                                            scale="0.015 0.015 0.025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                            geometry=""
+                                        ></a-box>
+                                        <a-entity
+                                            id="leftMiddleFingerBone3"
+                                            position="0 0 0.032"
+                                        >
+                                            <a-sphere
+                                                id="leftMiddleFingerJoint3"
+                                                scale="0.01 0.01 0.01"
+                                                material="color: #424e57"
+                                                geometry=""
+                                            ></a-sphere>
+                                            <a-box
+                                                id="leftMiddleFingerPart3"
+                                                scale="0.01 0.01 0.015"
+                                                material="color: #56677E"
+                                                position="0 0 0.012"
+                                                geometry=""
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                                <!-- Left Outer Finger -->
+                                <a-entity
+                                    id="leftOuterFingerBone1"
+                                    position="0.002 -0.0973 -.04"
+                                    scale="1.2 1.2 1.2"
+                                    rotation="90 0"
+                                >
+                                    <a-sphere
+                                        id="leftOuterFingerJoint1"
+                                        scale="0.015 0.015 0.015"
+                                        material="color: #424e57"
+                                        geometry=""
+                                    ></a-sphere>
+                                    <a-box
+                                        id="leftOuterFingerPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="leftOuterFingerBone2"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="leftOuterFingerJoint2"
+                                            scale="0.012 0.012 0.012"
+                                            material="color: #424e57"
+                                            geometry=""
+                                        ></a-sphere>
+                                        <a-box
+                                            id="leftOuterFingerPart2"
+                                            scale="0.015 0.015 0.025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                            geometry=""
+                                        ></a-box>
+                                        <a-entity
+                                            id="leftOuterFingerBone3"
+                                            position="0 0 0.032"
+                                        >
+                                            <a-sphere
+                                                id="leftOuterFingerJoint3"
+                                                scale="0.01 0.01 0.01"
+                                                material="color: #424e57"
+                                                geometry=""
+                                            ></a-sphere>
+                                            <a-box
+                                                id="leftOuterFingerPart3"
+                                                scale="0.01 0.01 0.015"
+                                                material="color: #56677E"
+                                                position="0 0 0.012"
+                                                geometry=""
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                            </a-entity>
+                        </a-entity>
+                    </a-entity>
+
+                    <!-- Right Arm -->
+                    <a-entity
+                        id="rightArmBone"
+                        rotation="-73.53340342708987 1.4730744912813465 11.314197580448367"
+                        position="-.36 .58"
+                    >
+                        <a-sphere
+                            id="rightShoulder"
+                            geometry=""
+                            scale="0.12 0.12 0.12"
+                            position="0.0 0"
+                            material="color: #424e57"
+                        ></a-sphere>
+                        <a-box
+                            id="rightUpperArm"
+                            geometry=""
+                            visible=""
+                            scale="0.1 0.3 0.16"
+                            position="-0.02 -0.14"
+                            material="color: #56677E"
+                        ></a-box>
+                        <a-entity
+                            id="rightElbowBone"
+                            rotation="-65.26562244335207 -166.0620766361519 -154.0952801270495"
+                            position="-.02 -.3"
+                        >
+                            <a-sphere
+                                id="rightElbow"
+                                geometry=""
+                                position=""
+                                scale="0.07 0.07 0.07"
+                                visible=""
+                                rotation=""
+                                material="color: #424e57"
+                            ></a-sphere>
+                            <a-box
+                                id="rightLowerArm"
+                                geometry=""
+                                visible=""
+                                scale="0.1 0.25 0.1"
+                                position="0 -.14"
+                                material="color: #56677E"
+                            ></a-box>
+                            <!-- Right Hand -->
+                            <a-entity
+                                id="rightWristBone"
+                                rotation="-14.583494759464843 -55.968809259559336 -23.60299637041426"
+                                position="0 -.27"
+                                scale="1.2 1.2 1.2"
+                            >
+                                <a-sphere
+                                    id="rightWrist"
+                                    scale=".045 .045 .045"
+                                    material="color: #424e57"
+                                ></a-sphere>
+                                <a-box
+                                    id="rightHand"
+                                    material="color: #56677E"
+                                    geometry=""
+                                    scale="0.03 0.1 0.09"
+                                    position="0 -.06"
+                                ></a-box>
+                                <!-- Right Thumb -->
+                                <a-entity
+                                    id="rightThumbBone1"
+                                    rotation="55.980841373257086 0 0"
+                                    position=".002 -.07 .046"
+                                    scale=".8 .8 .8"
+                                >
+                                    <a-sphere
+                                        id="rightThumbJoint1"
+                                        scale=".015 .015 .015"
+                                        material="color: #424e57"
+                                    ></a-sphere>
+                                    <a-box
+                                        id="rightThumbPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="rightThumbBone2"
+                                        rotation="17.932433072004503 0 0"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="rightThumbJoint2"
+                                            scale=".012 .012 .012"
+                                            material="color: #424e57"
+                                        ></a-sphere>
+                                        <a-box
+                                            id="rightThumbPart2"
+                                            scale=".015 .015 .025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                        ></a-box>
+                                        <a-entity
+                                            id="rightThumbBone3"
+                                            position="0 0 .032"
+                                        >
+                                            <a-sphere
+                                                id="rightThumbJoint3"
+                                                scale=".01 .01 .01"
+                                                material="color: #424e57"
+                                            ></a-sphere>
+                                            <a-box
+                                                id="rightThumbPart3"
+                                                scale=".01 .01 .015"
+                                                material="color: #56677E"
+                                                position="0 0 .012"
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                                <!-- Right Index Finger -->
+                                <a-entity
+                                    id="rightIndexFingerBone1"
+                                    position="0.002 -0.0973 0.035"
+                                    scale="1.2 1.2 1.2"
+                                    rotation="90 0"
+                                >
+                                    <a-sphere
+                                        id="rightIndexFingerJoint1"
+                                        scale="0.015 0.015 0.015"
+                                        material="color: #424e57"
+                                        geometry=""
+                                    ></a-sphere>
+                                    <a-box
+                                        id="rightIndexFingerPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="rightIndexFingerBone2"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="rightIndexFingerJoint2"
+                                            scale="0.012 0.012 0.012"
+                                            material="color: #424e57"
+                                            geometry=""
+                                        ></a-sphere>
+                                        <a-box
+                                            id="rightIndexFingerPart2"
+                                            scale="0.015 0.015 0.025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                            geometry=""
+                                        ></a-box>
+                                        <a-entity
+                                            id="rightIndexFingerBone3"
+                                            position="0 0 0.032"
+                                        >
+                                            <a-sphere
+                                                id="rightIndexFingerJoint3"
+                                                scale="0.01 0.01 0.01"
+                                                material="color: #424e57"
+                                                geometry=""
+                                            ></a-sphere>
+                                            <a-box
+                                                id="rightIndexFingerPart3"
+                                                scale="0.01 0.01 0.015"
+                                                material="color: #56677E"
+                                                position="0 0 0.012"
+                                                geometry=""
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                                <!-- Right Middle Finger -->
+                                <a-entity
+                                    id="rightMiddleFingerBone1"
+                                    position="0.002 -0.0973 -.005"
+                                    scale="1.2 1.2 1.2"
+                                    rotation="90 0"
+                                >
+                                    <a-sphere
+                                        id="rightMiddleFingerJoint1"
+                                        scale="0.015 0.015 0.015"
+                                        material="color: #424e57"
+                                        geometry=""
+                                    ></a-sphere>
+                                    <a-box
+                                        id="rightMiddleFingerPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="rightMiddleFingerBone2"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="rightMiddleFingerJoint2"
+                                            scale="0.012 0.012 0.012"
+                                            material="color: #424e57"
+                                            geometry=""
+                                        ></a-sphere>
+                                        <a-box
+                                            id="rightMiddleFingerPart2"
+                                            scale="0.015 0.015 0.025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                            geometry=""
+                                        ></a-box>
+                                        <a-entity
+                                            id="rightMiddleFingerBone3"
+                                            position="0 0 0.032"
+                                        >
+                                            <a-sphere
+                                                id="rightMiddleFingerJoint3"
+                                                scale="0.01 0.01 0.01"
+                                                material="color: #424e57"
+                                                geometry=""
+                                            ></a-sphere>
+                                            <a-box
+                                                id="rightMiddleFingerPart3"
+                                                scale="0.01 0.01 0.015"
+                                                material="color: #56677E"
+                                                position="0 0 0.012"
+                                                geometry=""
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                                <!-- Right Outer Finger -->
+                                <a-entity
+                                    id="rightOuterFingerBone1"
+                                    position="0.002 -0.0973 -.04"
+                                    scale="1.2 1.2 1.2"
+                                    rotation="90 0"
+                                >
+                                    <a-sphere
+                                        id="rightOuterFingerJoint1"
+                                        scale="0.015 0.015 0.015"
+                                        material="color: #424e57"
+                                        geometry=""
+                                    ></a-sphere>
+                                    <a-box
+                                        id="rightOuterFingerPart1"
+                                        scale="0.015 0.015 0.025"
+                                        material="color: #56677E"
+                                        geometry=""
+                                        visible=""
+                                        position="0 0 0.02"
+                                    ></a-box>
+                                    <a-entity
+                                        id="rightOuterFingerBone2"
+                                        position="0 0 0.032"
+                                    >
+                                        <a-sphere
+                                            id="rightOuterFingerJoint2"
+                                            scale="0.012 0.012 0.012"
+                                            material="color: #424e57"
+                                            geometry=""
+                                        ></a-sphere>
+                                        <a-box
+                                            id="rightOuterFingerPart2"
+                                            scale="0.015 0.015 0.025"
+                                            material="color: #56677E"
+                                            position="0 0 0.015"
+                                            geometry=""
+                                        ></a-box>
+                                        <a-entity
+                                            id="rightOuterFingerBone3"
+                                            position="0 0 0.032"
+                                        >
+                                            <a-sphere
+                                                id="rightOuterFingerJoint3"
+                                                scale="0.01 0.01 0.01"
+                                                material="color: #424e57"
+                                                geometry=""
+                                            ></a-sphere>
+                                            <a-box
+                                                id="rightOuterFingerPart3"
+                                                scale="0.01 0.01 0.015"
+                                                material="color: #56677E"
+                                                position="0 0 0.012"
+                                                geometry=""
+                                            ></a-box>
+                                        </a-entity>
+                                    </a-entity>
+                                </a-entity>
+                            </a-entity>
+                        </a-entity>
+                    </a-entity>
+                </a-entity>
+                <!-- Left Leg -->
+                <a-entity id="leftLegBone" position="0.15 0.75">
+                    <a-box
+                        id="leftThigh"
+                        position="0 -0.18"
+                        scale="0.18 0.36 0.14"
+                        material="color: #56677E"
+                        geometry=""
+                    ></a-box>
+                    <a-entity id="leftKneeBone" position="0 -.35 0">
+                        <a-sphere
+                            id="leftKnee"
+                            material="color: #424e57"
+                            geometry=""
+                            visible=""
+                            position=""
+                            scale="0.1 0.1 0.1"
+                        ></a-sphere>
+                        <a-box
+                            id="leftShin"
+                            material="color: #56677E"
+                            geometry=""
+                            visible=""
+                            position="0 -0.15"
+                            scale="0.1 0.24 0.12"
+                        ></a-box>
+                        <a-entity id="leftAnkleBone" position="0 -.28">
+                            <a-sphere
+                                id="leftAnkle"
+                                material="color: #424e57"
+                                geometry=""
+                                visible=""
+                                scale="0.075 0.075 0.075"
+                                position=""
+                            ></a-sphere>
+                            <a-box
+                                id="leftFoot"
+                                material="color: #56677E"
+                                geometry=""
+                                visible=""
+                                position="0 -0.07 0.07272"
+                                scale="0.16078 0.1 0.33205"
+                            ></a-box>
+                        </a-entity>
+                    </a-entity>
+                </a-entity>
+                <!-- Right Leg -->
+                <a-entity id="rightLegBone" position="-0.15 0.75">
+                    <a-box
+                        id="rightThigh"
+                        position="0 -0.18"
+                        scale="0.18 0.36 0.14"
+                        material="color: #56677E"
+                        geometry=""
+                    ></a-box>
+                    <a-entity id="rightKneeBone" position="0 -.35 0">
+                        <a-sphere
+                            id="rightKnee"
+                            material="color: #424e57"
+                            geometry=""
+                            visible=""
+                            position=""
+                            scale="0.1 0.1 0.1"
+                        ></a-sphere>
+                        <a-box
+                            id="rightShin"
+                            material="color: #56677E"
+                            geometry=""
+                            visible=""
+                            position="0 -0.15"
+                            scale="0.1 0.24 0.12"
+                        ></a-box>
+                        <a-entity id="rightAnkleBone" position="0 -.28">
+                            <a-sphere
+                                id="rightAnkle"
+                                material="color: #424e57"
+                                geometry=""
+                                visible=""
+                                scale="0.075 0.075 0.075"
+                                position=""
+                            ></a-sphere>
+                            <a-box
+                                id="rightFoot"
+                                material="color: #56677E"
+                                geometry=""
+                                visible=""
+                                position="0 -0.07 0.07272"
+                                scale="0.16078 0.1 0.33205"
+                            ></a-box>
+                        </a-entity>
+                    </a-entity>
+                </a-entity>
+            </a-entity>
+            <!-- End Surprised Robot -->
             <a-box
                 class="surprised"
                 height="2"
@@ -2872,7 +3832,10 @@
                 color="#4CC3D9"
                 material=""
                 geometry=""
+                visible="false"
             ></a-box>
+
+            
             <a-box
                 class="sad"
                 height="2"
